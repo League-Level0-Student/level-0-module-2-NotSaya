@@ -16,7 +16,7 @@ public class AnimalFarm {
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-	boolean canPlaySounds = true;
+	boolean canPlaySounds = false;
 
 	
 	public static void main(String[] args) {
@@ -28,15 +28,33 @@ public class AnimalFarm {
 		/* 1. Ask the user which animal they want, then see and hear 
 		 *    the animal they chose using one of the methods below.
 		*/			 
-			
+for (int i = 0; i<1; i--) {
+		String answer = JOptionPane.showInputDialog("Which animal do you want to choose? (cow, duck, dog, cat, or llama)?");
 		/* 2. Make it so that the user can keep entering new animals. */
-
+if (answer.equalsIgnoreCase("cow")) {
+	moo();
+}
+else if (answer.equalsIgnoreCase("duck")) {
+	quack();
+}
+else if (answer.equalsIgnoreCase("dog")) {
+	woof();
+}
+else if (answer.equalsIgnoreCase("cat")) {
+	meow();
+}
+else if (answer.equalsIgnoreCase("llama")) {
+	llamaScream();
+}
 	}
-
+	}
+	
 	void moo() {
 		playNoise(mooFile);
 		showImage(cowIcon);
 	}
+
+
 
 	void quack() {
 		playNoise(quackFile);
@@ -57,6 +75,7 @@ public class AnimalFarm {
 		playNoise(llamaFile);
 		showImage(llamaIcon);
 	}
+
 	
 
 
