@@ -5,6 +5,7 @@
 package _02_methods._2_safe_cracker;
 
 import java.io.File;
+import java.util.Iterator;
 import java.util.Random;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -29,6 +30,9 @@ public class SafeCracker {
 		 * Your mission: use the tryCode method to crack the safe by trying all possible
 		 * combinations
 		 */		
+for(int x = 10000000; x > 0; x--) {
+		tryCode(x);
+		}
 
 	}
 
